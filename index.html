@@ -22,6 +22,7 @@
     .card__body h2 { font-size: 1.05rem; margin: 0 0 4px; }
     .card__body p { font-size: .9rem; color: var(--muted); margin: 0; }
     .card__body .go { flex: none; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; transition: background .25s, color .25s; }
+    .card__body .go svg { width: 14px; height: 14px; display: block; }
     .card:hover .go { background: var(--ink); color: var(--card); }
     .num { font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; margin-bottom: 4px; display: block; }
     .pv { height: 200px; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
@@ -110,7 +111,7 @@
       document.getElementById('cards').innerHTML = window.STYLE_PAGES.map(function (p, i) {
         return '<a class="card" href="styles/' + p.slug + '.html">' +
           '<div class="pv pv--' + p.slug + '" aria-hidden="true">' + previews[p.slug] + '</div>' +
-          '<div class="card__body"><div><span class="num">0' + (i + 1) + '</span><h2>' + p.name + '</h2><p>' + p.blurb + '</p></div><span class="go" aria-hidden="true">→</span></div></a>';
+          '<div class="card__body"><div><span class="num">0' + (i + 1) + '</span><h2>' + p.name + '</h2><p>' + p.blurb + '</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></div></a>';
       }).join('');
     })();
   </script>
